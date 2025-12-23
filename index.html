@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BWS Group - Grupa Firm</title>
+    <title>BWS Group</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-	
+	<link rel="icon" type="image/png" href="bws.png">
 	
 	<style>
 /* ===========================
@@ -208,7 +208,7 @@ img {
     justify-content: center;
     background-image: 
         linear-gradient(135deg, rgba(43,45,51,0.80) 0%, rgba(58,61,69,0.75) 30%, rgba(71,74,82,0.80) 100%),
-        url('pexels-kateryna-babaieva-3678226-scaled.jpg');
+        url('BWS hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -259,7 +259,7 @@ img {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
     color: var(--color-gray-light);
@@ -398,52 +398,6 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 2rem;
-    background: var(--color-white);
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: var(--transition);
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-}
-
-.stat-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1rem;
-    color: var(--color-primary);
-}
-
-.stat-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.stat-number {
-    font-family: var(--font-primary);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-bg);
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    font-weight: 500;
-}
 
 /* ===========================
    Services Section
@@ -726,7 +680,7 @@ section {
 }
 
 .logistics-img {
-    background: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800') center/cover;
+    background: url('BWS car.png') center/cover;
 }
 
 /* ===========================
@@ -944,6 +898,16 @@ section {
     color: var(--color-gray-light);
 }
 
+.footer-col .company-name {
+    color: #ffffff;              /* jaśniejszy niż tekst NIP */
+    font-weight: 600;            /* delikatne wytłuszczenie */
+}
+
+.footer-col .company-nip {
+    color: var(--color-gray-light);  /* zostaje bardziej stonowany */
+    font-weight: 400;
+}
+
 /* ===========================
    Sticky Companies Bar
    =========================== */
@@ -1134,7 +1098,6 @@ section {
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">BWS Group</h1>
                 <p class="hero-subtitle">Grupa Firm Budujących Przyszłość Polskiego Przemysłu</p>
                 <div class="hero-description">
                     <p>Łączymy doświadczenie, kompetencje i innowacyjność w jednej silnej strukturze holdingowej. Specjalizujemy się w kompleksowych rozwiązaniach dla branży konstrukcji stalowych.</p>
@@ -1157,44 +1120,9 @@ section {
             <div class="about-content">
                 <div class="about-text">
                     <p class="lead">BWS Group to holding łączący wiodące firmy specjalizujące się w różnych obszarach przemysłu. Nasza siła tkwi w synergii kompetencji, doświadczenia i zasobów wszystkich podmiotów grupy.</p>
-                    <p>Działamy kompleksowo, oferując rozwiązania od konstrukcji stalowych, przez outsourcing procesowy, produkcję elementów na zamówienie, po specjalistyczne usługi logistyczne. Wspieramy naszych partnerów na każdym etapie współpracy, dostarczając im wykwalifikowany personel i usługi najwyższej jakości.</p>
-                    <p>Nasi ludzie to blisko 200 doświadczonych specjalistów, w tym głównie spawacze, ale również zawody pokrewne: ślusarze, monterzy konstrukcji, malarze i lakiernicy. Posiadają oni certyfikaty (m.in. TÜV SÜD) pozwalające na pracę na najwyższym poziomie - w Polsce, jak i w Europie i na świecie.</p>
+                    <p>Świadczymy kompleksowe usługi związane z realizacją projektów przemysłowych – od konstrukcji stalowych, przez produkcję elementów na zamówienie, aż po wsparcie procesów produkcyjnych i logistykę. Prowadzimy projekty od fazy przygotowania po końcową realizację, dbając o jakość, terminowość i sprawną współpracę na każdym etapie.</p>
+                    <p>Nasi ludzie to około 400 doświadczonych specjalistów, w tym głównie spawacze, ale również zawody pokrewne: ślusarze, monterzy konstrukcji, malarze i lakiernicy. Posiadają oni certyfikaty (m.in. TÜV SÜD) pozwalające na pracę na najwyższym poziomie - w Polsce, jak i w Europie i na świecie.</p>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-number">200</div>
-                        <div class="stat-label">Specjalistów</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-number">20</div>
-                        <div class="stat-label">Aktywnych Projektów</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                            </svg>
-                        </div>
-                        <div class="stat-number">10 lat</div>
-                        <div class="stat-label">Międzynarodowego doświadczenia</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Usługi Section -->
@@ -1239,7 +1167,7 @@ section {
                     <p>B&W SOLUTIONS to firma specjalizująca się w outsourcingu pracowniczym w sektorze konstrukcji stalowych. W naszej ofercie mamy doświadczonych spawaczy i monterów, gotowych do pracy z szeroką gamą materiałów i metod.</p>
                     <p>Jednym z naszych największych atutów jest umiejętność naszych monterów do interpretacji rysunków technicznych i izometrycznych, co umożliwia precyzyjną realizację zadań. Satysfakcja naszych klientów w całej Europie to dowód na to, że dostarczamy usługi najwyższej jakości.</p>
                     <ul class="service-features">
-                        <li>200+ wykwalifikowanych specjalistów</li>
+                        <li>400+ wykwalifikowanych specjalistów</li>
                         <li>Kompleksowe zarządzanie personelem</li>
                         <li>Zakwaterowanie i formalności</li>
                         <li>Odzież robocza i narzędzia</li>
@@ -1303,9 +1231,9 @@ section {
             <div class="companies-grid">
                 <div class="company-card">
                     <div class="company-logo">
-                        <div class="company-logo-placeholder">BW Solutions</div>
+                        <div class="company-logo-placeholder">B&W Solutions</div>
                     </div>
-                    <h3>BW Solutions</h3>
+                    <h3>B&W Solutions</h3>
                     <p>Outsourcing procesowy w branży konstrukcji stalowych. Spawacze, monterzy, ślusarze i specjaliści z wieloletnim doświadczeniem międzynarodowym.</p>
                     <ul class="company-features">
                         <li>Konstrukcje stalowe</li>
@@ -1315,9 +1243,9 @@ section {
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
-                        <div class="company-logo-placeholder">BW Logistics</div>
+                        <div class="company-logo-placeholder">ALTER ENTERPRISES</div>
                     </div>
-                    <h3>BW Logistics</h3>
+                    <h3>ALTER ENTERPRISES</h3>
                     <p>Kompleksowe rozwiązania logistyczne dla przemysłu. Transport, magazynowanie i zarządzanie łańcuchem dostaw.</p>
                     <ul class="company-features">
                         <li>Transport międzynarodowy</li>
@@ -1327,9 +1255,9 @@ section {
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
-                        <div class="company-logo-placeholder">BW Services</div>
+                        <div class="company-logo-placeholder">B&W Services</div>
                     </div>
-                    <h3>BW Services</h3>
+                    <h3>B&W Services</h3>
                     <p>Specjalistyczne usługi przemysłowe i doradztwo techniczne. Wspieramy rozwój biznesu naszych partnerów.</p>
                     <ul class="company-features">
                         <li>Doradztwo techniczne</li>
@@ -1421,7 +1349,6 @@ section {
 					<div class="partner-slide"><div class="partner-logo"><img src="mostostal.png" alt="Mostostal Siedlce"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="wobi-stal.png" alt="Wobi-Stal"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="jbstal_black.svg" alt="JB Stal Serwis"></div></div>
-					<div class="partner-slide"><div class="partner-logo"><img src="borimex.png" alt="Borimex"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="polski-tabor-szynowy.svg" alt="Polski Tabor Szynowy"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="HT_logo_CMYK.jpg" alt="HT Laser"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="profund.png" alt="Profund"></div></div>
@@ -1437,7 +1364,6 @@ section {
 					<div class="partner-slide"><div class="partner-logo"><img src="mostostal.png" alt="Mostostal Siedlce"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="wobi-stal.png" alt="Wobi-Stal"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="jbstal_black.svg" alt="JB Stal Serwis"></div></div>
-					<div class="partner-slide"><div class="partner-logo"><img src="borimex.png" alt="Borimex"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="polski-tabor-szynowy.svg" alt="Polski Tabor Szynowy"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="HT_logo_CMYK.jpg" alt="HT Laser"></div></div>
 					<div class="partner-slide"><div class="partner-logo"><img src="profund.png" alt="Profund"></div></div>
@@ -1468,7 +1394,7 @@ section {
                             </svg>
                             <div>
                                 <strong>Adres</strong>
-                                <p>ul. Lebiodowa 15 K<br>04-674 Warszawa</p>
+                                <p>Park Przemysłowy ul. Przecławska 5<br>03-879 Warszawa</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1487,7 +1413,7 @@ section {
                             </svg>
                             <div>
                                 <strong>Email</strong>
-                                <p><a href="mailto:office@bwsolution.pl">office@bwsolution.pl</a></p>
+                                <p><a href="mailto:office@bwsgroup.pl">office@bwsgroup.pl</a></p>
                             </div>
                         </div>
                     </div>
@@ -1528,11 +1454,14 @@ section {
                         <li><a href="#uslugi">Usługi</a></li>
                         <li><a href="#firmy">Nasze Firmy</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
+						<li><a href="#polityka-prywatnosci">Polityka prywatności</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Dane</h4>
-                    <p>NIP: 9522228209<br>REGON: 522108012</p>
+                    <p><span class="company-name">B&W Solutions Sp. z o.o.</span><br>NIP: 9522228209</p>
+                    <p><span class="company-name">B&W Services Sp. z o.o.</span><br>NIP: 5243001114</p>
+                    <p><span class="company-name">ALTER ENTERPRISES Sp. z o.o.</span><br>NIP: 6671782748</p>					
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1545,16 +1474,13 @@ section {
     <div class="companies-bar" id="companiesBar">
         <div class="companies-bar-content">
             <div class="company-item">
-                <span class="company-name">BW Solutions</span>
+                <span class="company-name">B&W Solutions</span>
             </div>
             <div class="company-item">
-                <span class="company-name">BW Logistics</span>
+                <span class="company-name">B&W Services</span>
             </div>
             <div class="company-item">
-                <span class="company-name">BW Services</span>
-            </div>
-            <div class="company-item">
-                <span class="company-name">BW Industrial</span>
+                <span class="company-name">ALTER ENTERPRISES</span>
             </div>
         </div>
     </div>
@@ -1641,7 +1567,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.company-card, .stat-item, .feature-item, .service-card');
+    const animateElements = document.querySelectorAll('.company-card, .feature-item, .service-card');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
