@@ -267,7 +267,7 @@ img {
 }
 
 .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     line-height: 1.8;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
@@ -641,16 +641,29 @@ section {
     gap: 1.5rem;
 }
 
-.feature-icon {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    color: var(--color-primary);
+.feature-icon svg {
+    display: none;
 }
 
-.feature-icon svg {
-    width: 100%;
-    height: 100%;
+.feature-icon {
+    width: auto;
+    height: auto;
+    min-width: auto;
+    background: none;
+    border-radius: 0;
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Większy trójkąt ▸ */
+.feature-icon::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 22px solid var(--color-primary);
 }
 
 .feature-content h4 {
@@ -681,6 +694,29 @@ section {
 
 .logistics-img {
     background: url('BWS car.png') center/cover;
+}
+
+/* Styl dla obrazu w sekcjach firm */
+.company-section-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.logistics-image {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 1rem;
 }
 
 /* ===========================
@@ -1100,7 +1136,7 @@ section {
             <div class="hero-content">
                 <p class="hero-subtitle">Grupa Firm Budujących Przyszłość Polskiego Przemysłu</p>
                 <div class="hero-description">
-                    <p>Łączymy doświadczenie, kompetencje i innowacyjność w jednej silnej strukturze holdingowej. Specjalizujemy się w kompleksowych rozwiązaniach dla branży konstrukcji stalowych.</p>
+                    <p>Łączymy doświadczenie, kompetencje i innowacyjność w jednej silnej strukturze holdingowej.</p>
                 </div>
                 <a href="#uslugi" class="btn btn-primary">Poznaj nasze usługi</a>
             </div>
@@ -1143,7 +1179,7 @@ section {
                         </svg>
                     </div>
                     <h3>Usługi Spawalnicze</h3>
-                    <p>W B&W SOLUTIONS oferujemy specjalistyczne usługi spawalnicze związane z konstrukcjami stalowymi. Nasz zespół składa się z doświadczonych spawaczy, którzy specjalizują się w różnych technikach spawania i są gotowi do pracy z różnymi materiałami.</p>
+                    <p>Oferujemy specjalistyczne usługi spawalnicze związane z konstrukcjami stalowymi. Nasz zespół składa się z doświadczonych spawaczy, którzy specjalizują się w różnych technikach spawania i są gotowi do pracy z różnymi materiałami.</p>
                     <p>Nasi profesjonaliści posiadają wymagane uprawnienia i doświadczenie, które gwarantują najwyższą jakość usług. Potrafią interpretować rysunki techniczne i izometryczne, co jest kluczowe dla precyzyjnego i efektywnego montażu konstrukcji stalowych.</p>
                     <ul class="service-features">
                         <li>Spawanie metodami MIG/MAG, TIG, MMA</li>
@@ -1164,7 +1200,7 @@ section {
                         </svg>
                     </div>
                     <h3>Outsourcing Procesowy</h3>
-                    <p>B&W SOLUTIONS to firma specjalizująca się w outsourcingu pracowniczym w sektorze konstrukcji stalowych. W naszej ofercie mamy doświadczonych spawaczy i monterów, gotowych do pracy z szeroką gamą materiałów i metod.</p>
+                    <p>Specjalizujemy się w outsourcingu procesowym w sektorze konstrukcji stalowych. W naszej ofercie mamy doświadczonych spawaczy i monterów, gotowych do pracy z szeroką gamą materiałów i metod.</p>
                     <p>Jednym z naszych największych atutów jest umiejętność naszych monterów do interpretacji rysunków technicznych i izometrycznych, co umożliwia precyzyjną realizację zadań. Satysfakcja naszych klientów w całej Europie to dowód na to, że dostarczamy usługi najwyższej jakości.</p>
                     <ul class="service-features">
                         <li>400+ wykwalifikowanych specjalistów</li>
@@ -1269,6 +1305,361 @@ section {
         </div>
     </section>
 
+<!-- B&W Solutions Section -->
+<section id="bw-solutions" class="logistics-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>Portfolio firm tworzących BWS Group</h2>
+        </div>
+		<div class="section-header">
+            <h2>B&W Solutions</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content">
+            <div class="logistics-text">
+                <h3>Outsourcing procesowy w branży konstrukcji stalowych</h3>
+                <p class="lead">Wykonujemy nasze usługi specjalistami z wieloletnim doświadczeniem międzynarodowym.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Konstrukcje stalowe</h4>
+                            <p>Realizacja projektów konstrukcji stalowych na najwyższym poziomie</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Usługi spawalnicze</h4>
+                            <p>Certyfikowani spawacze z uprawnieniami TÜV SÜD</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Montaż konstrukcji</h4>
+                            <p>Kompleksowy montaż i instalacja konstrukcji stalowych</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="pexels-kateryna-babaieva-3678226-scaled.jpg" alt="B&W Solutions - Spawalnictwo" class="company-section-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- B&W Services Section -->
+<section id="bw-services" class="logistics-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>B&W Services</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content">
+            <div class="logistics-text">
+                <h3>Specjalistyczne usługi przemysłowe</h3>
+                <p class="lead">Specjalistyczne usługi przemysłowe i doradztwo techniczne. Wspieramy rozwój biznesu naszych partnerów.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                                <path d="M12 2v10h10"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Doradztwo techniczne</h4>
+                            <p>Kompleksowe wsparcie na każdym etapie projektu</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Zarządzanie projektami</h4>
+                            <p>Profesjonalna koordynacja i nadzór projektów</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Optymalizacja procesów</h4>
+                            <p>Usprawnianie procesów produkcyjnych i logistycznych</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="B&W Services - Usługi przemysłowe" class="company-section-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ALTER ENTERPRISES Section -->
+<section id="alter-enterprises" class="logistics-section alt-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>ALTER ENTERPRISES</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content reverse-layout">
+            <div class="logistics-text">
+                <h3>Kompleksowe rozwiązania logistyczne</h3>
+                <p class="lead">Transport, magazynowanie i zarządzanie łańcuchem dostaw dla przemysłu ciężkiego.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Transport międzynarodowy</h4>
+                            <p>Przewóz konstrukcji stalowych na terenie całej Europy</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Magazynowanie</h4>
+                            <p>Bezpieczne składowanie materiałów i zarządzanie zapasami</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Logistyka kontraktowa</h4>
+                            <p>Kompleksowe zarządzanie łańcuchem dostaw</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="BWS car.png" alt="ALTER ENTERPRISES - Transport" class="company-section-img"">
+            </div>
+        </div>
+    </div>
+</section><!-- B&W Solutions Section -->
+<section id="bw-solutions" class="logistics-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>Portfolio firm tworzących BWS Group</h2>
+        </div>
+		<div class="section-header">
+            <h2>B&W Solutions</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content">
+            <div class="logistics-text">
+                <h3>Outsourcing procesowy w branży konstrukcji stalowych</h3>
+                <p class="lead">Wykonujemy nasze usługi specjalistami z wieloletnim doświadczeniem międzynarodowym.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Konstrukcje stalowe</h4>
+                            <p>Realizacja projektów konstrukcji stalowych na najwyższym poziomie</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Usługi spawalnicze</h4>
+                            <p>Certyfikowani spawacze z uprawnieniami TÜV SÜD</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Montaż konstrukcji</h4>
+                            <p>Kompleksowy montaż i instalacja konstrukcji stalowych</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="pexels-kateryna-babaieva-3678226-scaled.jpg" alt="B&W Solutions - Spawalnictwo" class="company-section-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- B&W Services Section -->
+<section id="bw-services" class="logistics-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>B&W Services</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content">
+            <div class="logistics-text">
+                <h3>Specjalistyczne usługi przemysłowe</h3>
+                <p class="lead">Specjalistyczne usługi przemysłowe i doradztwo techniczne. Wspieramy rozwój biznesu naszych partnerów.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                                <path d="M12 2v10h10"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Doradztwo techniczne</h4>
+                            <p>Kompleksowe wsparcie na każdym etapie projektu</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Zarządzanie projektami</h4>
+                            <p>Profesjonalna koordynacja i nadzór projektów</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Optymalizacja procesów</h4>
+                            <p>Usprawnianie procesów produkcyjnych i logistycznych</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="B&W Services - Usługi przemysłowe" class="company-section-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ALTER ENTERPRISES Section -->
+<section id="alter-enterprises" class="logistics-section alt-section">
+    <div class="logistics-bg-overlay"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>ALTER ENTERPRISES</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="logistics-content reverse-layout">
+            <div class="logistics-text">
+                <h3>Kompleksowe rozwiązania logistyczne</h3>
+                <p class="lead">Transport, magazynowanie i zarządzanie łańcuchem dostaw dla przemysłu ciężkiego.</p>
+                <div class="logistics-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Transport międzynarodowy</h4>
+                            <p>Przewóz konstrukcji stalowych na terenie całej Europy</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Magazynowanie</h4>
+                            <p>Bezpieczne składowanie materiałów i zarządzanie zapasami</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Logistyka kontraktowa</h4>
+                            <p>Kompleksowe zarządzanie łańcuchem dostaw</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics-image">
+                <img src="BWS car.png" alt="ALTER ENTERPRISES - Transport" class="company-section-img"">
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <!-- Logistyka Section -->
     <section id="logistyka" class="logistics-section">
         <div class="logistics-bg-overlay"></div>
@@ -1325,7 +1716,7 @@ section {
                 </div>
                 <div class="logistics-image">
                     <div class="image-placeholder logistics-img">
-                        <!-- Tutaj będzie zdjęcie ciężarówki/logistyki -->
+						<img src="bws car.png" alt="Logistyka" class="logistics-section-img">
                     </div>
                 </div>
             </div>
